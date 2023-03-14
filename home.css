@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --fontSize: 1rem;
+    --backgroundColor: #E5E4E2;
+    --charcoalGray: #232023;
+    --vikingBlue: #4adede;
+    --pictonBlue: #1aa7ec;
+    --steelGray: #71797E;
+    --smokeGray: #848884;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--vikingBlue);
+    height: 80%;
+    width: 65%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#title {
+    padding: 0 3rem;
+    font-size: calc(2 * var(--fontSize));
+    font-weight: bolder;
+    color: var(--charcoalGray);
+}
+
+.newTasks {
+    display: flex;
+    width: 100%;
+    padding-left: 3rem;
+    gap: 20px;
+}
+
+.newTasks input[type=text] {
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: calc(1.3 * var(--fontSize));
+    font-weight: bolder;
+    background-color: var(--backgroundColor);
+    outline: none;
+}
+
+.newTasks input[type=submit] {
+    border: none;
+    outline: none;
+    font-size: calc(1.5 * var(--fontSize));
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--charcoalGray), black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.newTasks input[type=text]::placeholder {
+    font-weight: bolder;
+    font-size: calc(1.3 * var(--fontSize));
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.taskList h2 {
+    padding-left: 0 3rem;
+    font-size: calc(2 * var(--fontSize));
+}
+
+.taskList .task {
+    width: 81.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskList .task .content {
+    width: 100%;
+}
+
+.taskList .task .content input {
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var( --backgroundColor);
+    font-size: calc(1.2 * var(--fontSize));
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.taskList .task .actions {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: calc(2 * var(--fontSize));
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--smokeGray), var(--steelGray));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: calc(2 * var(--fontSize));
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--smokeGray), var(--steelGray));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
